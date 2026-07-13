@@ -1,0 +1,14 @@
+{
+  "name": "contractsift-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ContractSift AI - 智能合同审查系统",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && node --watch server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && node server.js",
+    "postinstall": "cd backend && npm install && cd ../frontend && npm install"
+  }
+}
