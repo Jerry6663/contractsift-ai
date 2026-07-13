@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: contractsift-api
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3098"
+      - key: DEEPSEEK_BASE_URL
+        value: https://api.deepseek.com
+      - key: FILE_RETENTION_DAYS
+        value: "30"
+      - key: MOCK_REVIEW
+        value: "false"
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: AUDIT_ENCRYPTION_KEY
+        sync: false
